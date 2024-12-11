@@ -56,6 +56,7 @@ spec:
                 - timeout
                 - {{ .Values.configJob.configTimeout | quote }}
                 - make
+                - EXTRA_PLAYBOOK_OPTS="-vvvvvv"
                 - openshift_vp_install
               volumeMounts:
                 - name: agof-scratch-space
